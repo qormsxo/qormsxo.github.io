@@ -6,8 +6,8 @@
   --color-accent: #4338ca;
   --color-accent-soft: #eef2ff;
   --color-ink: #1e293b;
-  --color-muted: #64748b;
-  --color-line: #e2e8f0;
+  --color-muted: #475569;
+  --color-line: #cbd5e1;
   --color-paper: #f8fafc;
 }
 
@@ -19,7 +19,7 @@
     background: var(--color-paper);
     color: var(--color-ink);
     font-family: var(--font-sans);
-    line-height: 1.7;
+    line-height: 1.75;
     word-break: keep-all;
     overflow-wrap: anywhere;
   }
@@ -30,7 +30,7 @@
 
 /* Notion rich text 렌더링 */
 .rt > * + * {
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
 }
 .rt > .rt-gap {
   margin-top: 1rem;
@@ -44,7 +44,7 @@
   padding-left: 1.1rem;
 }
 .rt li + li {
-  margin-top: 0.3rem;
+  margin-top: 0.4rem;
 }
 .rt li::before {
   content: "";

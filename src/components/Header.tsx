@@ -25,8 +25,8 @@ export function Header({ profile }: { profile: PublicProfile }) {
   const websiteLabel = plainText(profile.website);
 
   return (
-    <header className="border-b border-line bg-white">
-      <div className="mx-auto max-w-4xl px-5 py-12 sm:px-8 sm:py-16">
+    <header className="bg-white">
+      <div className="mx-auto max-w-4xl px-5 pb-8 pt-12 sm:px-8 sm:pb-10 sm:pt-16">
         <div className="flex items-center gap-5 sm:gap-7">
           <Avatar name={profile.name} />
           <div className="min-w-0">
@@ -44,7 +44,7 @@ export function Header({ profile }: { profile: PublicProfile }) {
         </div>
 
         {profile.intro && (
-          <RichText value={profile.intro} className="mt-8 max-w-3xl text-[15px] leading-8 text-slate-700 sm:text-base sm:leading-8" />
+          <RichText value={profile.intro} className="mt-8 max-w-3xl text-[15px] leading-8 text-slate-800 sm:text-base sm:leading-8" />
         )}
       </div>
     </header>

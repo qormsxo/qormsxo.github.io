@@ -24,7 +24,7 @@ export default async function Page() {
     <>
       <Header profile={r.profile} />
 
-      <main className="mx-auto max-w-4xl space-y-12 px-5 py-10 sm:px-8 sm:py-14">
+      <main className="mx-auto max-w-4xl space-y-12 px-5 pb-10 pt-6 sm:px-8 sm:pb-14 sm:pt-8">
         {r.skillGroups.length > 0 && (
           <Section title={t.skills}>
             <Card className="space-y-4">
@@ -43,8 +43,8 @@ export default async function Page() {
             <div className="grid gap-4 md:grid-cols-2">
               {r.core.map((c) => (
                 <Card key={c.title}>
-                  <h3 className="text-base font-bold leading-snug text-ink">{c.title}</h3>
-                  {c.details && <RichText value={c.details} className="mt-3 text-[15px] text-slate-700" />}
+                  <h3 className="text-lg font-bold leading-snug text-ink">{c.title}</h3>
+                  {c.details && <RichText value={c.details} className="mt-3 text-[15px] text-slate-800" />}
                 </Card>
               ))}
             </div>
@@ -57,7 +57,7 @@ export default async function Page() {
               {r.careers.map((c) => (
                 <Card key={c.company}>
                   <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                    <h3 className="text-lg font-bold text-ink">{c.company}</h3>
+                    <h3 className="text-xl font-bold text-ink">{c.company}</h3>
                     {c.period && <RichText value={c.period} className="text-sm text-muted" />}
                   </div>
                   {c.position && <RichText value={c.position} className="mt-0.5 text-sm font-medium text-accent" />}
@@ -66,13 +66,13 @@ export default async function Page() {
                       {c.projects && (
                         <div>
                           <FieldLabel>주요 프로젝트 연혁</FieldLabel>
-                          <RichText value={c.projects} className="text-[15px] text-slate-700" />
+                          <RichText value={c.projects} className="text-[15px] text-slate-800" />
                         </div>
                       )}
                       {c.achievements && (
                         <div>
                           <FieldLabel>핵심 성과 및 역량</FieldLabel>
-                          <RichText value={c.achievements} className="text-[15px] text-slate-700" />
+                          <RichText value={c.achievements} className="text-[15px] text-slate-800" />
                         </div>
                       )}
                     </div>
@@ -98,18 +98,18 @@ export default async function Page() {
             <div className="space-y-4">
               {r.problems.map((p) => (
                 <Card key={p.title}>
-                  <h3 className="text-base font-bold leading-snug text-ink sm:text-lg">{p.title}</h3>
+                  <h3 className="text-lg font-bold leading-snug text-ink sm:text-xl">{p.title}</h3>
                   <div className="mt-4 space-y-5">
                     {p.problem && (
                       <div>
                         <FieldLabel>문제</FieldLabel>
-                        <RichText value={p.problem} className="text-[15px] leading-8 text-slate-700" />
+                        <RichText value={p.problem} className="text-[15px] leading-8 text-slate-800" />
                       </div>
                     )}
                     {p.solution && (
                       <div className="border-l-2 border-accent/30 pl-4">
                         <FieldLabel>해결 및 성과</FieldLabel>
-                        <RichText value={p.solution} className="text-[15px] leading-8 text-slate-700" />
+                        <RichText value={p.solution} className="text-[15px] leading-8 text-slate-800" />
                       </div>
                     )}
                   </div>

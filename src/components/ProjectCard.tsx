@@ -6,14 +6,14 @@ export function ProjectCard({ item }: { item: ProjectItem }) {
   return (
     <Card>
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h3 className="text-base font-bold leading-snug text-ink sm:text-lg">{item.title}</h3>
+        <h3 className="text-lg font-bold leading-snug text-ink sm:text-xl">{item.title}</h3>
         {item.period && <RichText value={item.period} className="text-sm text-muted" />}
       </div>
       {item.remark && (
         <RichText value={item.remark} className="mt-1 text-sm font-medium text-accent" />
       )}
-      {item.description && <RichText value={item.description} className="mt-3 text-[15px] text-slate-700" />}
-      {item.details && <RichText value={item.details} className="mt-3 text-[15px] text-slate-700" />}
+      {item.description && <RichText value={item.description} className="mt-3 text-[15px] text-slate-800" />}
+      {item.details && <RichText value={item.details} className="mt-3 text-[15px] text-slate-800" />}
       {item.skills.length > 0 && (
         <div className="mt-4">
           <Chips items={item.skills} />

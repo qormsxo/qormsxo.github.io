@@ -5,7 +5,7 @@ import { RichText } from "./RichText";
 export function Section({ title, children, className = "" }: { title: string; children: ReactNode; className?: string }) {
   return (
     <section className={className}>
-      <h2 className="mb-4 flex items-center gap-3 text-lg font-bold tracking-tight text-ink">
+      <h2 className="mb-4 flex items-center gap-3 text-xl font-bold tracking-tight text-ink sm:text-2xl">
         <span className="h-5 w-1 rounded-full bg-accent" aria-hidden />
         {title}
       </h2>
@@ -36,7 +36,7 @@ export function ListRow({ title, sub, meta }: { title: string; sub?: RichTextVal
     <div className="flex flex-col gap-0.5 px-5 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 sm:px-6">
       <div className="min-w-0">
         <div className="font-semibold text-ink">{title}</div>
-        {sub && <RichText value={sub} className="text-sm text-slate-700" />}
+        {sub && <RichText value={sub} className="text-sm text-slate-800" />}
       </div>
       {meta && <RichText value={meta} className="shrink-0 text-sm text-muted" />}
     </div>
@@ -61,5 +61,5 @@ export function Chips({ items }: { items: string[] }) {
 }
 
 export function FieldLabel({ children }: { children: ReactNode }) {
-  return <h4 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">{children}</h4>;
+  return <h4 className="mb-2 text-sm font-bold text-slate-600 sm:text-[15px]">{children}</h4>;
 }
