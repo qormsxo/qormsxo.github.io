@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR",
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --color-accent: #4338ca;
+  --color-accent-soft: #eef2ff;
+  --color-ink: #1e293b;
+  --color-muted: #64748b;
+  --color-line: #e2e8f0;
+  --color-paper: #f8fafc;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  a {
+    text-underline-offset: 3px;
+  }
+}
+
+/* Notion rich text 렌더링 */
+.rt > * + * {
+  margin-top: 0.5rem;
+}
+.rt > .rt-gap {
+  margin-top: 1rem;
+}
+.rt ul {
+  list-style: none;
+  padding: 0;
+}
+.rt li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+.rt li + li {
+  margin-top: 0.3rem;
+}
+.rt li::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  top: 0.7em;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 9999px;
+  background: var(--color-accent);
+  opacity: 0.7;
+}
+.rt a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.rt code {
+  background: #f1f5f9;
+  border-radius: 0.25rem;
+  padding: 0.05em 0.35em;
+  font-size: 0.9em;
+}

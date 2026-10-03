@@ -1,0 +1,30 @@
+{
+  "name": "qormsxo-resume",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/clean-fetch-cache.mjs && next build",
+    "typecheck": "tsc --noEmit",
+    "preview": "npx --yes http-server out -p 4173 -c-1",
+    "inspect:notion": "tsx scripts/inspect-notion.ts",
+    "verify:public": "tsx scripts/verify-public-build.ts",
+    "export:pdf": "tsx scripts/export-pdf.ts"
+  },
+  "dependencies": {
+    "@notionhq/client": "^5.27.0",
+    "next": "^16.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "puppeteer": "^25.12.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

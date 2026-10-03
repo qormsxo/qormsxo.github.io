@@ -1,0 +1,21 @@
+# dependencies
+node_modules
+
+# next
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+
+# env (secrets)
+.env
+.env*.local
+
+# private assets / generated PDF outputs
+assets/profile.jpg
+resume.pdf
+resume.html
+
+# misc
+.DS_Store
+npm-debug.log*
